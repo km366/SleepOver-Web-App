@@ -9,6 +9,10 @@ import { AvailabilityComponent } from './availability/availability.component';
 import { FormsModule } from '@angular/forms';
 import { UserDatesService } from './UserDates.service';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,10 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase, 'sleepover'),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [UserDatesService],
   bootstrap: [AppComponent]

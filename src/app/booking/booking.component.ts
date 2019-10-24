@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { UserDatesService } from '../UserDates.service';
-import * as firebase from 'firebase/app';
+import { AngularFireDatabase, AngularFireList }from 'angularfire2/database';
 
 @Component({
   selector: 'app-booking',
@@ -16,12 +16,13 @@ export class BookingComponent implements OnInit {
   cust_dorm: string;
   check_in_date: string; 
   check_out_date: string;
-  drop_time: string;
-  pick_time: string;
+  //drop_time: string;
+  //pick_time: string;
   add_info: string;
 
   constructor(private router: Router,
-    private datesService: UserDatesService) {
+    private datesService: UserDatesService,
+    public db: AngularFireDatabase) {
       this.dates = new Array<string>(2);
      }
 
@@ -34,10 +35,18 @@ export class BookingComponent implements OnInit {
   }
   
   checkEmpty() {
-    if (this.cust_name === undefined || this.cust_email === undefined || this.cust_phone === undefined || this.cust_dorm === "empty" || this.check_in_date === undefined || this.check_out_date === undefined || this.drop_time === "empty" || this.pick_time === "empty") {
+    if (this.cust_name === undefined || this.cust_email === undefined || this.cust_phone === undefined || this.cust_dorm === "empty" || this.check_in_date === undefined || this.check_out_date === undefined/* || this.drop_time === "empty" || this.pick_time === "empty"*/) {
       alert("Please fill all the required fields!");
     }
     else {
+      let data = {
+        name: this.cust_name,
+        check_in: this.check_in_date,
+        check_out: this.check_out_date,
+        email: this.cust_email,
+        mattress_id: "3"
+      };
+      this.db.object('bookings/1').set(data).then(_ => console.log('Data set'));
       this.router.navigate(['/', 'confirmation']).then(nav=> {
         console.log(nav);
       }, err => {

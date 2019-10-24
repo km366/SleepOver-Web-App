@@ -11,6 +11,8 @@
   transition: 0.3s;
   width: 75%;
   border-radius: 10px 10px 10px 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
 }
 
 .card:hover {

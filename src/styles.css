@@ -25,6 +25,8 @@ input {
   padding: 5px;
   margin-bottom: 10px;
   background-color: transparent;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  color: rgb(211, 202, 202);
   resize: none;
   border: 1px solid black;
   border-radius: 6px;

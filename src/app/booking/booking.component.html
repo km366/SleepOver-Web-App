@@ -33,7 +33,7 @@
     </select><br>
     <label for="sdate">Start Date <font color='red'>*</font></label><br>
     <input [(ngModel)]="check_in_date" type="date" name="check_in_date" id="check_in_date"><br>
-    <label for="drop_time">Drop-off Time Slot <font color='red'>*</font></label><br>
+    <!--<label for="drop_time">Drop-off Time Slot <font color='red'>*</font></label><br>
     <select [(ngModel)]="drop_time" name="drop_time" id="drop_time">
       <option value="empty">Please select</option>
       <option value="12pm-1pm">12pm-1pm</option>
@@ -44,10 +44,10 @@
       <option value="5-6pm">5pm-6pm</option>
       <option value="6pm-7pm">6pm-7pm</option>
       <option value="7pm-8pm">7pm-8pm</option>
-    </select>
+    </select>-->
     <label for="edate">End Date <font color='red'>*</font></label><br>
     <input [(ngModel)]="check_out_date" type="date" name="check_out_date" id="check_out_date"><br>
-    <label for="pick_time">Pick-up Time Slot <font color='red'>*</font></label><br>
+    <!--<label for="pick_time">Pick-up Time Slot <font color='red'>*</font></label><br>
     <select [(ngModel)]="pick_time" name="pick_time" id="pick_time">
       <option value="empty">Please select</option>
       <option value="12pm-1pm">12pm-1pm</option>
@@ -58,7 +58,7 @@
       <option value="5-6pm">5pm-6pm</option>
       <option value="6pm-7pm">6pm-7pm</option>
       <option value="7pm-8pm">7pm-8pm</option>
-    </select><br>
+    </select><br>-->
     <label for="add_info">Additional Information</label>
     <textarea [(ngModel)]="add_info" name="add_info" style="font-family: Georgia, 'Times New Roman', Times, serif"></textarea><br>
     <input type="button" (click)="checkEmpty()" name="submit" value="Submit" id="submit">

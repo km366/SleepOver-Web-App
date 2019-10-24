@@ -1,0 +1,63 @@
+head {
+  text-align: center;
+}
+body {
+  /*background-image: url("../../assets/images/background.png");*/
+  text-align: center;
+}
+.title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+  color: rgb(233, 104, 104);
+  padding-top: 5px;
+}
+.subtitle {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 18px;
+  color: rgb(236, 134, 134);
+  font-style: italic;
+}
+
+label {
+  font-size: 20px;
+  display: block;
+}
+legend {
+  font-size: 28px;
+  font-weight: bold;
+  padding: 5px;
+}
+select {
+  width: 40%;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  background-color: transparent;
+  border: 1px solid black;
+  border-radius: 6px;
+  resize: vertical;
+}
+input[type="button"]{
+  width: 30%;
+  padding: 5px;
+  font-size: 20px;
+  background-color:black;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  resize: vertical;
+}
+fieldset {
+  border-right: 0px;
+  border-left: 0px;
+  padding: 10px;
+}
+textarea {
+  height: 3cm;
+  width: 10cm;
+  resize: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

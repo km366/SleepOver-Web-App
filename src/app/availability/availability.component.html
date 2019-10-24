@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+
+
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="container">
+      <h2>
+        Check Availability
+      </h2>
+      <form>
+        <label for="check_in_date">Check-in Date <font color='red'>*</font></label><br>
+        <input type="date" [(ngModel)]='check_in_date' name="check_in_date" id="cust_check_in_date"><br>
+        <label for="check_out_date">Check-out Date <font color='red'>*</font></label><br>
+        <input type="date" [(ngModel)]='check_out_date' name="check_out_date" id="cust_check_out_date"><br>
+        <input type="button" (click)="check()" name="check" value="Check" id="check">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyDhqbVjQO0ZkGIQAa1DE6d-DjKB3YJo7r0',
+    authDomain: 'sleepover-d5c16.firebaseapp.com',
+    databaseURL: 'https://sleepover-d5c16.firebaseio.com',
+    projectId: 'sleepover-d5c16',
+    storageBucket: '',
+    messagingSenderId: '712032251291',
+    appId: '1:712032251291:web:929fc596a2180c97'
+  }
 };
 
 /*

@@ -1,0 +1,70 @@
+<!--DOCTYPE html-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SleepOver</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta charset="utf-8">
+</head>
+<body>
+<form>
+  <fieldset align="center">
+    <legend align="center">Booking Details</legend>
+    <label for="name">Name <font color='red'>*</font></label><br>
+    <input [(ngModel)]="cust_name" type="text" id="cust_name" placeholder="Enter your Full Name" name="name"><br>
+    <label for="email">Email <font color='red'>*</font></label><br>
+    <input [(ngModel)]="cust_email" type="email" placeholder="Enter your Email Id" name="email" id="cust_email"><br>
+    <label>Phone Number <font color='red'>*</font></label><br>
+    <input [(ngModel)]="cust_phone" type="text" placeholder="Enter your moblie number" name="number" id="cust_phone"><br>
+    <label for="dorm">Dorm <font color='red'>*</font></label>
+    <select [(ngModel)]="cust_dorm" name="dorm" id="cust_dorm" required="">
+      <option value="empty">Please select</option>
+      <option value="kelly">Kelly Hall</option>
+      <option value="towers">Towers Hall</option>
+      <option value="millenium">Millenium</option>
+      <option value="myers">Myers</option>
+      <option value="vanr">Van Rensselaer</option>
+      <option value="race">Race Hall</option>
+      <option value="caneris">Caneris</option>
+      <option value="bentley">Bentley Hall</option>
+      <option value="north">North Hall</option>
+    </select><br>
+    <label for="sdate">Start Date <font color='red'>*</font></label><br>
+    <input [(ngModel)]="check_in_date" type="date" name="check_in_date" id="check_in_date"><br>
+    <label for="drop_time">Drop-off Time Slot <font color='red'>*</font></label><br>
+    <select [(ngModel)]="drop_time" name="drop_time" id="drop_time">
+      <option value="empty">Please select</option>
+      <option value="12pm-1pm">12pm-1pm</option>
+      <option value="1pm-2pm">1pm-2pm</option>
+      <option value="2pm-3pm">2pm-3pm</option>
+      <option value="3pm-4pm">3pm-4pm</option>
+      <option value="4pm-5pm">4pm-5pm</option>
+      <option value="5-6pm">5pm-6pm</option>
+      <option value="6pm-7pm">6pm-7pm</option>
+      <option value="7pm-8pm">7pm-8pm</option>
+    </select>
+    <label for="edate">End Date <font color='red'>*</font></label><br>
+    <input [(ngModel)]="check_out_date" type="date" name="check_out_date" id="check_out_date"><br>
+    <label for="pick_time">Pick-up Time Slot <font color='red'>*</font></label><br>
+    <select [(ngModel)]="pick_time" name="pick_time" id="pick_time">
+      <option value="empty">Please select</option>
+      <option value="12pm-1pm">12pm-1pm</option>
+      <option value="1pm-2pm">1pm-2pm</option>
+      <option value="2pm-3pm">2pm-3pm</option>
+      <option value="3pm-4pm">3pm-4pm</option>
+      <option value="4pm-5pm">4pm-5pm</option>
+      <option value="5-6pm">5pm-6pm</option>
+      <option value="6pm-7pm">6pm-7pm</option>
+      <option value="7pm-8pm">7pm-8pm</option>
+    </select><br>
+    <label for="add_info">Additional Information</label>
+    <textarea [(ngModel)]="add_info" name="add_info" style="font-family: Georgia, 'Times New Roman', Times, serif"></textarea><br>
+    <input type="button" (click)="checkEmpty()" name="submit" value="Submit" id="submit">
+    <p><font color='red'>*</font> Please fill the required fields so that we can provide timely and quality service!</p>
+
+  </fieldset>
+</form>
+</body>
+</html>
